@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    function Calculate() {            
+        var e = document.getElementById("ddlDestination");
+        var x = document.getElementById("ddlDuration");
+        var y = document.getElementById("ddlRoomAmount");
+        if (e.options[e.selectedIndex].value != "0" && x.options[x.selectedIndex].value != "0" && y.options[y.selectedIndex].value != "0")
+        {
+            var destinationValue = e.options[e.selectedIndex].value * x.options[x.selectedIndex].value * y.options[y.selectedIndex].value;
+            var destinationText = e.options[e.selectedIndex].text;
+            var durationText = x.options[x.selectedIndex].text;
+            var peopleText = y.options[y.selectedIndex].text;
+            document.getElementById("demo").innerHTML = "Final Total: " + destinationText+ "("+ e.options[e.selectedIndex].value +") * "+durationText +" * "+peopleText+ "=<b>"+ destinationValue +"</b>" ;
+           
+        }
+        else{
+            document.getElementById("demo").innerHTML ="Invalid entry";
+        }
+    }
+    </script>
+    
+
+<head>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <script src="https://jsuites.net/v4/jsuites.webcomponents.js"></script>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i>email@group8.com</p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>888-4206969</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="Members.html" class="nav-item nav-link">Members</a>
+                        <a href="Gallery.html" class="nav-item nav-link">Gallery</a>                       
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="Booking.html" class="nav-item nav-link active">Booking</a>
+                        <a href="ProjectedSales.html" class="nav-item nav-link">Projected sales</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-uppercase">Booking</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Booking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative mb-2">
+                        <img class="img-fluid" src="img/Solo-Room.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative mb-2">
+                        <img class="img-fluid" src="img/Familia-Room.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="destination-item position-relative mb-2">
+                        <img class="img-fluid" src="img/Deluxe-Room.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                 
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Bookings</h6>
+                <h1>Ilous resort</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form bg-white" style="padding: 30px;">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <!-- <div class="form-row"> -->
+                                <div class="control-group col-sm-12">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-12">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            <div class="control-group col-sm-12">
+                                <select id="ddlDestination" class="custom-select px-4" style="height: 47px;">
+                                    <option value="0">Select Destination</option>
+                                    <option value="4500">Solo Room - 4500</option>
+                                    <option value="6500">Deluxe Room - 6500</option>
+                                    <option value="8000">Familia Room - 8000</option>                                
+                                </select>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-12">
+
+                                <input type="date">
+
+                            <p class="help-block custom-select-danger"></p>
+                            </div>
+    
+                            <div class="control-group col-sm-12">
+                                <select id="ddlDuration" class="custom-select px-4" style="height: 47px;">
+                                    <option value="0">Select Duration</option>
+                                    <option value="3">3D/2N</option>
+                                    <option value="5">5D/4N</option>
+                                    <option value="14">2 weeks</option>                                   
+                                </select>
+                                <p class="help-block custom-select-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-12">
+                                <select id="ddlRoomAmount" class="custom-select px-4" style="height: 47px;">
+                                    <option value="0">Select Number of Rooms</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option> 
+                                    <option value="4">4</option>     
+                                    <option value="5">5</option>   
+                                    <option value="6">6</option>   
+                                    <option value="7">7</option>   
+                                    <option value="8">8</option>                                 
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>   
+
+
+                                </select>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group col-sm-12"id="demo">
+
+                            </div>
+                            <p class="help-block text-danger"></p>
+                            <div class="text-center">
+                                <button type="button" onclick="Calculate()"class="btn btn-primary py-3 px-4">Compute</button>
+                            </div>
+                        </form>                        
+                    </div>
+                   
+                </div>               
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+</body>
+
+</html>
